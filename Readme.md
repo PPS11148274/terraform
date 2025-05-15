@@ -18,5 +18,5 @@ Para ver lo que hará terraform se utiliza:
 terraform plan
 ```
 En la imagen siguiente se puede apreciar.
-
+![terra_plan](https://github.com/PPS11148274/terraform/blob/main/asset/cambios.png)
 
