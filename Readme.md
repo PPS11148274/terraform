@@ -19,4 +19,5 @@ terraform plan
 ```
 En la imagen siguiente se puede apreciar.
 ![terra_plan](https://github.com/PPS11148274/terraform/blob/main/asset/cambios.png)
+![funcionando](https://github.com/PPS11148274/terraform/blob/main/asset/VM_debian_corriendo.png)
 
