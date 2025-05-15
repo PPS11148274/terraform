@@ -13,3 +13,10 @@ Se puede ver en la imagen siguiente.
 
 ![inicio_terraform](https://github.com/PPS11148274/terraform/blob/main/asset/inicio_terraform.png)
 
+Para ver lo que hará terraform se utiliza:
+```
+terraform plan
+```
+En la imagen siguiente se puede apreciar.
+
+
