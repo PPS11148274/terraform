@@ -29,6 +29,12 @@ El siguiente paso es crear el playbook para automatizar la configuración (apach
 Una vez generado este archivo se lanza para configurar el nodo.
 ![lanza playbook](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/crea_archivo_hosts.png).
 En la siguiente imagen, se puede ver que funciona correctamente.
-![apache funcionando](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/apache_funcionando.png)
+![apache funcionando](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/apache_funcionando.png) 
+# _______________________________________________________________________
+Configurar una máquina virtual Ubuntu 24.04 en Virtualbox mediante Ansible.
+- Crear un index.html con el contenido: ‘Ansible rocks’ en el directorio del servidor web para
+poder ser mostrado y reiniciar el servicio.
+- Realizar un curl al servidor web y verificar el mensaje ‘Ansible rocks’.
 
+Para esta tarea solo 
 
