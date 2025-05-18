@@ -39,4 +39,7 @@ poder ser mostrado y reiniciar el servicio.
 Para esta tarea solo hay que modificar la parte de página de prueba del playbook apache.yml
 Comentar todos los apartado (o eliminarlos) excepto ese, debe quedar así.
 
+![ansible_rocks](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/ansible_rocks.png)
+
+Se comprueba ahora que funciona correctamente haciendo un curl.
 
