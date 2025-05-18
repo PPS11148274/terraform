@@ -16,5 +16,10 @@ Se utiliza el método habitual de instalación y nada más, es simple.
 sudo apt update
 sudo apt install ansible -y
 ```
-
+## Configurar archivo de inventario
+El archivo de inventario contiene información sobre los hosts que administrará con Ansible. Puede incluir de uno a varios cientos \
+de servidores en su archivo de inventario y los hosts pueden organizarse en grupos y subgrupos. El archivo de inventario a menudo \ 
+se utiliza también para configurar variables que serán válidas sólo para hosts o grupos específicos, \
+a fin de usarse dentro de los playbooks y las plantillas.
+Las claves generadas, se añaden también al archivo /etc/ansible/hosts.
 
