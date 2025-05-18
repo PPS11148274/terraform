@@ -29,5 +29,6 @@ El siguiente paso es crear el playbook para automatizar la configuración (apach
 Una vez generado este archivo se lanza para configurar el nodo.
 ![lanza playbook](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/crea_archivo_hosts.png).
 En la siguiente imagen, se puede ver que funciona correctamente.
-![apache funcionando](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/crea_archivo_hosts.png)
+![apache funcionando](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/apache_funcionando.png)
+
 
