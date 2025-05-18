@@ -1,0 +1,84 @@
+---
+- name: Actualizar sistema e instalar Apache2
+  hosts: all  # O especifica tu grupo de servidores
+  become: yes  # Ejecutar como root
+  gather_facts: yes  # Recopilar información del sistema
+
+  tasks:
+    # Tarea 1: Actualizar la lista de paquetes
+    - name: Actualizar índice de paquetes
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600  # Actualizar si el cache es más viejo que 1 hora
+      tags: update
+
+    # Tarea 2: Realizar upgrade del sistema
+    - name: Actualizar todos los paquetes
+      apt:
+        upgrade: dist
+        autoremove: yes  # Eliminar paquetes no necesarios
+      tags: upgrade
+      notify:
+        - Reiniciar servidor si es necesario
+
+    # Tarea 3: Instalar Apache2
+    - name: Instalar paquete Apache2
+      apt:
+        name: apache2
+        state: latest
+        force_apt_get: yes  # Forzar uso de apt-get para compatibilidad
+      tags: install
+      notify:
+        - Habilitar e iniciar Apache
+
+    # Tarea 4: Verificar estado de Apache (opcional)
+    - name: Verificar estado del servicio Apache
+      command: systemctl status apache2
+      register: apache_status
+      changed_when: false  # No marca como cambiado
+      ignore_errors: yes  # Continuar si falla
+      tags: verify
+
+    # Tarea 5: Mostrar información de versión (opcional)
+    - name: Obtener versión de Apache
+      command: apache2 -v
+      register: apache_version
+      changed_when: false
+      tags: info
+
+    # Tarea 6: Crear página de prueba (opcional)
+    - name: Crear página de prueba
+      copy:
+        content: |
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <title>Servidor {{ ansible_hostname }}</title>
+          </head>
+          <body>
+              <h1>¡Funciona!</h1>
+              <p>Servidor: {{ ansible_hostname }}</p>
+              <p>Apache version: {{ apache_version.stdout }}</p>
+          </body>
+          </html>
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+      tags: testpage
+
+  handlers:
+    # Handler 1: Reiniciar Apache
+    - name: Habilitar e iniciar Apache
+      service:
+        name: apache2
+        enabled: yes
+        state: restarted
+    # Handler 2: Reiniciar servidor si es necesario
+    - name: Reiniciar servidor si es necesario
+      reboot:
+        msg: "Reinicio requerido después de actualizaciones del kernel"
+        connect_timeout: 5
+        reboot_timeout: 600
+        pre_reboot_delay: 0
+        post_reboot_delay: 30
