@@ -36,5 +36,7 @@ Configurar una máquina virtual Ubuntu 24.04 en Virtualbox mediante Ansible.
 poder ser mostrado y reiniciar el servicio.
 - Realizar un curl al servidor web y verificar el mensaje ‘Ansible rocks’.
 
-Para esta tarea solo 
+Para esta tarea solo hay que modificar la parte de página de prueba del playbook apache.yml
+Comentar todos los apartado (o eliminarlos) excepto ese, debe quedar así.
+
 
