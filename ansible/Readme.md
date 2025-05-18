@@ -27,4 +27,6 @@ Ahora se hace una prueba de conexión. \
 ![prueba de conexion](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/crea_archivo_hosts.png) \
 El siguiente paso es crear el playbook para automatizar la configuración (apache.yml).
 Una vez generado este archivo se lanza para configurar el nodo.
+![lanza playbook](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/crea_archivo_hosts.png).
+En la siguiente imagen, se puede ver que funciona correctamente.
 
