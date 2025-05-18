@@ -24,4 +24,6 @@ a fin de usarse dentro de los playbooks y las plantillas.
 Las claves generadas, se añaden también al archivo /etc/ansible/hosts.
 ![crea archivo hosts](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/crea_archivo_hosts.png)
 Ahora se hace una prueba de conexión.
+![prueba de conexion](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/crea_archivo_hosts.png)
+El siguiente paso es crear el playbook para automatizar la configuración (apache.yml).
 
