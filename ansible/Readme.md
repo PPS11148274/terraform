@@ -43,3 +43,6 @@ Comentar todos los apartado (o eliminarlos) excepto ese, debe quedar así.
 
 Se comprueba ahora que funciona correctamente haciendo un curl.
 
+![curl comprobacion](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/ansible_rocks.png)
+
+
