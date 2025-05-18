@@ -18,12 +18,13 @@ sudo apt install ansible -y
 ```
 ## Configurar archivo de inventario
 El archivo de inventario contiene información sobre los hosts que administrará con Ansible. Puede incluir de uno a varios cientos \
-de servidores en su archivo de inventario y los hosts pueden organizarse en grupos y subgrupos. El archivo de inventario a menudo \ 
+de servidores en su archivo de inventario y los hosts pueden organizarse en grupos y subgrupos. El archivo de inventario a menudo  
 se utiliza también para configurar variables que serán válidas sólo para hosts o grupos específicos, \
 a fin de usarse dentro de los playbooks y las plantillas.
-Las claves generadas, se añaden también al archivo /etc/ansible/hosts.
-![crea archivo hosts](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/crea_archivo_hosts.png)
-Ahora se hace una prueba de conexión.
-![prueba de conexion](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/crea_archivo_hosts.png)
+Las claves generadas, se añaden también al archivo /etc/ansible/hosts. \
+![crea archivo hosts](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/crea_archivo_hosts.png) \
+Ahora se hace una prueba de conexión. \
+![prueba de conexion](https://github.com/PPS11148274/terraform/blob/main/ansible/asset/crea_archivo_hosts.png) \
 El siguiente paso es crear el playbook para automatizar la configuración (apache.yml).
+Una vez generado este archivo se lanza para configurar el nodo.
 
